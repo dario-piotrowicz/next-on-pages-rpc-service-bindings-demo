@@ -1,0 +1,12 @@
+{
+  "name": "next-on-pages-rpc-service-bindings-demo",
+  "workspaces": [
+    "next-app",
+    "workers/*"
+  ],
+  "scripts": {
+    "start-worker": "npm run start -w workers/rpc-worker",
+    "start-next-app": "npm run dev -w next-app",
+    "start": "npm run start-worker & (sleep 3 && npm run start-next-app)"
+  }
+}

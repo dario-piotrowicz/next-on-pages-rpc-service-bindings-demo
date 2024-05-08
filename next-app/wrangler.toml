@@ -1,0 +1,10 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "next-on-pages-service-rpc"
+compatibility_date = "2024-05-02"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[services]]
+binding = "RPC_WORKER"
+service = "rpc-worker"
+entrypoint = "SumEntrypoint"
